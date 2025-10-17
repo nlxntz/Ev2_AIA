@@ -15,15 +15,15 @@
 ####  - joblib (serialización de modelos)
 
 ### Ejecución del Proyecto
-1. Clonar el repositorio
+#### 1. Clonar el repositorio
  - git clone https://github.com/nlxntz/Ev_AIA.git
-- cd Ev2_AIA
+ - cd Ev2_AIA
 
-2. Crear entorno virtual
+#### 2. Crear entorno virtual
  - python -m venv venv (ó  Ctrl + Shift + P)
 
-3. Instalar dependencias
+#### 3. Instalar dependencias
  - pip install -r requirements.txt
 
-4. Ejecutar la aplicación
+#### 4. Ejecutar la aplicación
  - python run.py
