@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Predicción de Diabetes</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+  body {
+    background: linear-gradient(135deg, #e8f5e9, #ffffff);
+    font-family: 'Segoe UI', sans-serif;
+  }
+  .card {
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  }
+  .btn {
+    border-radius: 12px;
+  }
+  .title {
+    color: #2e7d32;
+    font-weight: 700;
+  }
+  .back-btn {
+    text-decoration: none;
+    color: #1b5e20;
+    font-weight: 600;
+    transition: 0.2s;
+  }
+  .back-btn:hover {
+    color: #0b3d0b;
+  }
+</style>
+</head>
+<body>
+<div class="container mt-5">
+  <div class="card p-4">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <h2 class="title">Predicción de Diabetes</h2>
+      <a href="/" class="back-btn">← Volver al inicio</a>
+    </div>
+
+    <form method="post" action="/predict_diabetes">
+      <div class="row g-3">
+        <div class="col-md-3">
+          <label>Embarazos</label>
+          <input class="form-control" type="number" name="pregnancies" value="0">
+        </div>
+        <div class="col-md-3">
+          <label>Glucosa</label>
+          <input class="form-control" type="number" name="glucose" value="120">
+        </div>
+        <div class="col-md-3">
+          <label>Presión Arterial</label>
+          <input class="form-control" type="number" name="bloodpressure" value="70">
+        </div>
+        <div class="col-md-3">
+          <label>Grosor de Piel</label>
+          <input class="form-control" type="number" name="skinthickness" value="20">
+        </div>
+      </div>
+
+      <div class="row g-3 mt-2">
+        <div class="col-md-3">
+          <label>Insulina</label>
+          <input class="form-control" type="number" name="insulin" value="85">
+        </div>
+        <div class="col-md-3">
+          <label>Índice de Masa Corporal (BMI)</label>
+          <input class="form-control" type="number" step="0.1" name="bmi" value="25.0">
+        </div>
+        <div class="col-md-3">
+          <label>Función de Pedigrí (DPF)</label>
+          <input class="form-control" type="number" step="0.01" name="diabetespedigreefunction" value="0.5">
+        </div>
+        <div class="col-md-3">
+          <label>Edad</label>
+          <input class="form-control" type="number" name="age" value="33">
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary mt-4 px-4 py-2">Predecir Diabetes</button>
+    </form>
+
+    {% if result %}
+    <div class="mt-4">
+      <h4 class="text-secondary">Resultados:</h4>
+      <div class="alert {% if result.pred_lr==1 %}alert-danger{% else %}alert-success{% endif %}">
+        <strong>Regresión Logística:</strong> Probabilidad {{ result.prob_lr }} → 
+        {% if result.pred_lr==1 %} Positivo {% else %} Negativo {% endif %}
+      </div>
+      <div class="alert {% if result.pred_rf==1 %}alert-danger{% else %}alert-success{% endif %}">
+        <strong>Random Forest:</strong> 
+        {% if result.pred_rf==1 %} Positivo {% else %} Negativo {% endif %}
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</div>
+</body>
+</html>
