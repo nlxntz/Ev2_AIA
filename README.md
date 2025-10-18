@@ -3,6 +3,7 @@
 ## Proyecto: Predicción de Costos Médicos y Riesgo de Diabetes
 ### Descripción General
 #### El objetivo de este proyecto es integrar dos modelos de Machine Learning, de regresión lineal para predecir el costo del seguro médico, y otro de clasificación para predecir la probabilidad de diabetes.
+https://ev2-aplicacionesia.onrender.com/
 
 ### Tecnologías Utilizadas
 ####  - Lenguaje: Python 3.10+
