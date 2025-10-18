@@ -17,18 +17,18 @@ https://ev2-aplicacionesia.onrender.com/
 
 ### Ejecución del Proyecto
 #### 1. Clonar el repositorio
- - git clone https://github.com/nlxntz/Ev_AIA.git
- - cd Ev2_AIA
+#### - git clone https://github.com/nlxntz/Ev_AIA.git
+#### - cd Ev2_AIA
 
 #### 2. Crear entorno virtual
- - python -m venv venv (ó  Ctrl + Shift + P en VSCode)
- - venv\Script\activate
+#### - python -m venv venv (ó  Ctrl + Shift + P en VSCode)
+#### - venv\Script\activate
 
 #### 3. Instalar dependencias
- - pip install -r requirements.txt
+#### - pip install -r requirements.txt
 
 #### 4. Ejecutar la aplicación
- - python run.py
+#### - python run.py
 
 ### Modelos Implementados
 #### 1. Predicción de Diabetes
@@ -41,3 +41,5 @@ https://ev2-aplicacionesia.onrender.com/
 
 ### Analisis Solicitado
 ### 1) ¿Cuál es el umbral ideal para el modelo de predicción de diabetes?
+#### El modelo de Regresión Logística entrega una probabilidad entre 0 y 1.
+#### Por defecto, el umbral es 0.5, sin embargo, tras evaluar las métricas (precisión, recall y F1-score), se determinó que el umbral óptimo es 0.38, el cual mejora la sensibilidad (detección de casos positivos) sin perder demasiada precisión.
