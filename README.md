@@ -16,26 +16,26 @@ https://ev2-aplicacionesia.onrender.com/
 ####  - joblib (serialización de modelos)
 
 ### Ejecución del Proyecto
-#### 1. Clonar el repositorio
+### 1. Clonar el repositorio
 #### git clone https://github.com/nlxntz/Ev_AIA.git
 #### cd Ev2_AIA
 
-#### 2. Crear entorno virtual
+### 2. Crear entorno virtual
 #### python -m venv venv (ó  Ctrl + Shift + P en VSCode)
 #### venv\Script\activate
 
-#### 3. Instalar dependencias
+## 3. Instalar dependencias
 #### pip install -r requirements.txt
 
-#### 4. Ejecutar la aplicación
+### 4. Ejecutar la aplicación
 #### python run.py
 
 ### Modelos Implementados
-#### 1. Predicción de Diabetes
+### 1. Predicción de Diabetes
 #### Tipo de modelo: Clasificación binaria (regresión Logística y Random Forest)
 #### Objetivo: Determinar la probabilidad de que un paciente tenga diabates a partir de variables como: Glucosa, presión arterial, IMC, edad, etc.
 
-#### 2. Costo de Seguro Médico
+### 2. Costo de Seguro Médico
 #### Tipo de modelo: Regresión (Regresión lineal y Random Forest)
 #### Objetivo: Estimar el costo del seguro médico de un paciente a partir de características como: Edad, sexo, fumador, región, BMI, hijos, etc.
 
