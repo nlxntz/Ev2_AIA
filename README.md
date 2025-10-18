@@ -24,7 +24,7 @@ https://ev2-aplicacionesia.onrender.com/
 #### python -m venv venv (ó  Ctrl + Shift + P en VSCode)
 #### venv\Script\activate
 
-## 3. Instalar dependencias
+### 3. Instalar dependencias
 #### pip install -r requirements.txt
 
 ### 4. Ejecutar la aplicación
