@@ -43,3 +43,5 @@ https://ev2-aplicacionesia.onrender.com/
 ### 1) ¿Cuál es el umbral ideal para el modelo de predicción de diabetes?
 #### El modelo de Regresión Logística entrega una probabilidad entre 0 y 1.
 #### Por defecto, el umbral es 0.5, sin embargo, tras evaluar las métricas (precisión, recall y F1-score), se determinó que el umbral óptimo es 0.38, el cual mejora la sensibilidad (detección de casos positivos) sin perder demasiada precisión.
+### 2) ¿Cuales son los factores que más influyen en el precio de los costos asociados al seguro médico?
+####
