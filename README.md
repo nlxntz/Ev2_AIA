@@ -41,7 +41,28 @@ https://ev2-aplicacionesia.onrender.com/
 
 ## Analisis Solicitado
 ### 1) ¿Cuál es el umbral ideal para el modelo de predicción de diabetes?
-#### El modelo de Regresión Logística entrega una probabilidad entre 0 y 1.
-#### Por defecto, el umbral es 0.5, sin embargo, tras evaluar las métricas (precisión, recall y F1-score), se determinó que el umbral óptimo es 0.38, el cual mejora la sensibilidad (detección de casos positivos) sin perder demasiada precisión.
+#### El umbral ideal se determinó analizando la relación entre sensibilidad y especificidad.
+#### Un valor cercano a 0.4 ofreció el mejor equilibrio, priorizando la detección temprana de casos positivos, sin aumentar excesivamente los falsos positivos.
+#### Esto es importante en contextos médicos, donde es preferible detectar posibles pacientes antes que omitir un caso real.
 ### 2) ¿Cuales son los factores que más influyen en el precio de los costos asociados al seguro médico?
-####
+#### Según la importancia de variables del modelo de regresión, los factores más influyentes fueron:
+#### - Edad: a mayor edad, mayor costo esperado.
+#### - IMC: altos valores se asocian con mayor riesgo de enfermedades.
+#### - Ser fumador: el factor con mayor impacto, incrementa significativamente el costo del seguro.
+#### - Número de hijos: influye moderadamente, al igual que la región geográfica.
+### 3) Análisis comparativo de las características de ambos modelos con RandomForest
+#### El modelo Random Forest mostró mejor rendimiento frente a modelos más simples (como regresión logística o lineal) gracias a su capacidad de capturar relaciones no lineales.
+#### En ambos casos:
+#### - Para diabetes, RandomForest mejoró la precisión y el recall respecto a la regresión logística.
+#### - Para seguros médicos, redujo el error cuadrático medio y mejoró la generalización frente a la regresión lineal.
+### 4) ¿Qué técnica de optimización mejora el rendimiento de ambos modelos?
+#### - El número de estimadores (n_estimators)
+#### - La profundidad máxima (max_depth)
+#### - Y los criterios de división (criterion).
+### 5) Contexto de los datos
+#### - Dataset de diabetes: proviene de un estudio clínico sobre factores que influyen en la aparición de diabetes tipo II. Incluye variables como glucosa, presión arterial, edad y número de embarazos.
+#### - Dataset de seguros médicos: contiene información demográfica y de salud de personas, junto a los costos asociados a sus seguros.
+### 6) Análisis del sesgo de los modelos
+#### Ambos modelos presentan cierto sesgo hacia las clases o valores más frecuentes:
+#### - En el modelo de diabetes, la clase “no diabético” es predominante, lo que genera un sesgo hacia la predicción negativa (subrepresentación de casos positivos).
+#### - En el modelo de seguros, el sesgo surge por la distribución desigual de fumadores y edades extremas, lo que afecta la predicción en grupos minoritarios.
