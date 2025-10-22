@@ -64,5 +64,5 @@ https://ev2-aplicacionesia.onrender.com/
 #### - Dataset de seguros médicos: contiene información demográfica y de salud de personas, junto a los costos asociados a sus seguros.
 ### 6) Análisis del sesgo de los modelos
 #### Ambos modelos presentan cierto sesgo hacia las clases o valores más frecuentes:
-#### - En el modelo de diabetes, la clase “no diabético” es predominante, lo que genera un sesgo hacia la predicción negativa (subrepresentación de casos positivos).
+#### - En el modelo de diabetes, la clase “no diabético” es predominante, lo que genera un sesgo hacia la predicción negativa.
 #### - En el modelo de seguros, el sesgo surge por la distribución desigual de fumadores y edades extremas, lo que afecta la predicción en grupos minoritarios.
